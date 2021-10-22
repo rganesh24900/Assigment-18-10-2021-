@@ -36,6 +36,8 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
+
+
         ArrayList<Vehicle> vehicleList = new ArrayList<>();
         boolean notCheckingBalance = true;
         boolean checkingBalance = true;
@@ -43,6 +45,7 @@ public class Main {
         int siz = 2;
         boolean goingBack = true;
         boolean onlyOneVehicle = false;
+
 
         while (goingBack) {
 
@@ -65,6 +68,7 @@ public class Main {
                         case "Bike":
                             vehicleList.add(new Bike());
                             System.out.println("Bike is being repaired");
+
                             break;
                         case "":
 
@@ -133,7 +137,7 @@ public class Main {
                         int repairedVehicles1;
                         if (onlyOneVehicle) {
 
-                            repairedVehicles1 = vehicleList.size()-1;
+                            repairedVehicles1 = vehicleList.size() - 1;
 
                         } else {
 
@@ -156,11 +160,13 @@ public class Main {
 
                     case 2:
                         try {
-                            int firstOngoingRepairs = vehicleList.size() - 2;
-                            int secondOngoingRepairs = vehicleList.size() - 1;
+
                             if (onlyOneVehicle) {
+                                int firstOngoingRepairs = vehicleList.size() - 1;
                                 System.out.println("The ongoing repairs are of : " + vehicleList.get(firstOngoingRepairs).name);
                             } else {
+                                int firstOngoingRepairs = vehicleList.size() - 2;
+                                int secondOngoingRepairs = vehicleList.size() - 1;
                                 System.out.println("The ongoing repairs are of : " + vehicleList.get(firstOngoingRepairs).name + " and " + vehicleList.get(secondOngoingRepairs).name);
                             }
                         } catch (IndexOutOfBoundsException e) {
